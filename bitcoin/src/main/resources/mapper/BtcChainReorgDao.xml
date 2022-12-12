@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="hu.bme.bitcoin.dao.BtcChainReorgDao">
+
+<insert id="insertBtcChainReorg" useGeneratedKeys="true" keyProperty="id">
+    insert into btc_reorg(old_data, new_data, record_time) values(#{oldHashCode}, #{newHashCode}, #{time})
+</insert>
+
+
+
+
+</mapper>

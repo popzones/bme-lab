@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="hu.bme.bitcoin.dao.BtcBlockChainInfoDao">
+
+
+
+    
+    
+    <insert id="insertBtcBlockChainInfo" useGeneratedKeys="true" keyProperty="id">
+        insert into btc_blockchain_info(chain, blocks, headers, bestblockhash, difficulty, time, mediantime, verificationprogress, initialblockdownload, chainwork, size_on_disk, pruned, warnings) values
+        (#{chain}, #{blocks}, #{headers}, #{bestBlockHash}, #{difficulty}, #{time}, #{medianTime}, #{verificationProgress}, #{initialBlockDownload}, #{chainWork}, #{sizeOnDisk}, #{pruned}, #{warnings})
+    </insert>
+</mapper>
